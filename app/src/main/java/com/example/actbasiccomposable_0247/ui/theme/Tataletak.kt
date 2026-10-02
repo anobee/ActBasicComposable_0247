@@ -38,7 +38,13 @@ fun TataletakBox(modifier: Modifier){
         modifier = modifier
             .fillMaxWidth()
             .fillMaxHeight(), contentAlignment = Alignment.Center
-    )
+    ){
+        Text(text = "Komponen1")
+        Text(text = "Komponen2")
+        Text(text = "Komponen3")
+        Text(text = "Komponen4")
+        Text(text = "Komponen5")
+    }
 }
 
 
