@@ -49,7 +49,14 @@ fun TataletakBox(modifier: Modifier){
 
 @Composable
 fun TataletakColumnRow(modifier: Modifier){
-    ColumnRow(modifier ){}
+    ColumnRow(modifier.fillMaxWidth(),
+        horizontalArrangment = Arrangement.SpaceEvenly){
+    }
+}
+
+@Composable
+fun TataletakColumnRow(modifier: Modifier){
+
 }
 
 
