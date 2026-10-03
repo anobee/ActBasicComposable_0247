@@ -65,9 +65,17 @@ fun Tugas(modifier: Modifier = Modifier) {
         )
 
         Text(
-            text = "Dicky Dhiva Arrayan",
+            text = "Dicky Dhiva arrayan",
             fontSize = 16.sp,
             color = Color.Blue,
             fontWeight = FontWeight.Bold
         )
 
+        Text(
+            text = "20230140247",
+            fontSize = 23.sp,
+            color = Color.Black,
+            fontWeight = FontWeight.Bold
+        )
+
+}
