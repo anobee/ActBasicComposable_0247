@@ -73,7 +73,7 @@ fun TataletakColumnRow(modifier: Modifier){
 
 @Composable
 fun TataletakRowColumn(modifier: Modifier){
-    Row(modifier.fillMaxWidth(), HorizontalArrangment = Arrangment.SpaceEvenly)
+    Row(modifier.fillMaxWidth(), horizontalArrangment = Arrangment.SpaceEvenly)
     {
         //koloom1
         Column() {
@@ -90,6 +90,53 @@ fun TataletakRowColumn(modifier: Modifier){
     }
 }
 
+@Composable
+fun TataletakBoxColumn(modifier:modifier){
+    val gambar = painterresource(id=R.drawable.notasibalok)
+    Column{
+        Box(
+            modifier = modifier
+                .fillMaxWidth
+                .Height(height = 110.dp)
+                .Background(color = color.yellow)
+        ){
+            Column(){
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontaArrangement = Arrangment.SpaceEvenly
+                ){
+                    Text(text = "Col1_Row1_Komponen1")
+                    Text(text = "Col1_Row1_Komponen2")
+                    Text(text = "Col1_Row1_Komponen3")
+                }
+                Row(
+                    modifier = modifier.fillMaxWidth()
+                    ,horizontalArrangment = Arrangment.SpaceEvenly
+                ){
+                    Text(text = "Col1_Row1_Komponen1")
+                    Text(text = "Col1_Row1_Komponen2")
+                    Text(text = "Col1_Row1_Komponen3")
+                }
+
+            }
+        }
+
+        Spacer(modifier = modifier.height(height = 10.dp))
+        Box(
+            modfier = modifier.fillMaxWidth()
+                .Height(height = 300.dp)
+                .background(color=color.cyan),
+            contentAlingment = Alignment.Center
+        ){
+            Image(Painter = gambar,
+                contentDescription =null,
+                contentscale = ContentScale.fit)
+            Text
+
+        }
+
+    }
+}
 
 
 
