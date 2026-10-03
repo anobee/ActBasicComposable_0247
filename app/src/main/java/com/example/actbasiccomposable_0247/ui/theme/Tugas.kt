@@ -22,6 +22,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.layout.Box
 
 @Composable
 fun Tugas(modifier: Modifier = Modifier) {
@@ -49,7 +50,7 @@ fun Tugas(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(52.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.image1),
+            painter = painterResource(id = R.drawable.image3),
             contentDescription = "Logo universitas",
             modifier = Modifier.size(145.dp),
             contentScale = ContentScale.Fit
@@ -80,13 +81,27 @@ fun Tugas(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        Image(
-            painter = painterResource(id = R.drawable.image2),
-            contentDescription = "Foto aja",
-            modifier = Modifier
-                .size(300.dp)
-                .clip(CircleShape),
-            contentScale = ContentScale.Crop
-        )
+        Box(
+            modifier = Modifier.size(300.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.image2),
+                contentDescription = "Background",
+                modifier = Modifier
+                    .fillMaxSize()
+                    .clip(CircleShape),
+                contentScale = ContentScale.Crop
+            )
+
+            Image(
+                painter = painterResource(id = R.drawable.image3),
+                contentDescription = "crop foto",
+                modifier = Modifier
+                    .size(120.dp)
+                    .clip(CircleShape),
+                contentScale = ContentScale.Crop
+            )
+        }
     }
 }
