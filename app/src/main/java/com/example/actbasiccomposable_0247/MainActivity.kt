@@ -14,13 +14,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.actbasiccomposable_0247.ui.theme.ActBasicComposable_0247Theme
 
 class MainActivity : ComponentActivity() {
-    Override fun onCreate(savedInstanceState : Bundle?){
-        super.onCreate(svedInstanceState)
+    override fun onCreate(savedInstanceState : Bundle?){
+        super.onCreate(savedInstanceState)
         setContent{
-            MyLayoutTheme{
-                Scaffold(modifier = modifier.fillMaxSize()){
+            ActBasicComposable_0247Theme {
+                Scaffold(modifier = Modifier.fillMaxSize()){
                     innerPadding -> TataletakBoxColumnRow(
-                        modifier = modifier.padding(paddingValues = innerPadding)
+                        modifier = Modifier.padding(paddingValues = innerPadding)
                     )
                 }
             }
