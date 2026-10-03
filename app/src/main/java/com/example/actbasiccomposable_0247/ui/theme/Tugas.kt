@@ -46,3 +46,5 @@ fun Tugas(modifier: Modifier = Modifier) {
             color = Color.White
         )
 
+        Spacer(modifier = Modifier.height(52.dp))
+
