@@ -48,3 +48,10 @@ fun Tugas(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(52.dp))
 
+        Image(
+            painter = painterResource(id = R.drawable.logo_umy),
+            contentDescription = "Logo universitas",
+            modifier = Modifier.size(145.dp),
+            contentScale = ContentScale.Fit
+        )
+
