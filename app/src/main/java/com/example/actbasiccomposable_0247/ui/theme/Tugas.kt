@@ -95,7 +95,7 @@ fun Tugas(modifier: Modifier = Modifier) {
             )
 
             Image(
-                painter = painterResource(id = R.drawable.image3),
+                painter = painterResource(id = R.drawable.image1),
                 contentDescription = "crop foto",
                 modifier = Modifier
                     .size(120.dp)
