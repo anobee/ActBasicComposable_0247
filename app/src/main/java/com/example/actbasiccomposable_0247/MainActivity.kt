@@ -5,27 +5,23 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.actbasiccomposable_0247.ui.theme.ActBasicComposable_0247Theme
+import androidx.compose.foundation.layout.padding
 
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState : Bundle?){
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent{
+        enableEdgeToEdge()
+        setContent {
             ActBasicComposable_0247Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()){
-                    innerPadding -> TataletakBoxColumnRow(
-                        modifier = Modifier.padding(paddingValues = innerPadding)
-                    )
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    Tugas(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
     }
-
 }
+
 

@@ -1,5 +1,6 @@
 package com.example.actbasiccomposable_0247.ui.theme
 
+import android.content.res.Resources
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -22,6 +23,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.actbasiccomposable_0247.R
 
 
 @Composable
@@ -37,7 +39,7 @@ fun TataletakColumn(modifier: Modifier){
 
 @Composable
 fun TataletakRow(modifier: Modifier) {
-    Row(modfier.fillMaxWidth(),horizontalArrangement = Arrangement.SpaceEvenly){
+    Row(modifier.fillMaxWidth(),horizontalArrangement = Arrangement.SpaceEvenly){
         Text(text = "Komponen1")
         Text(text = "Komponen2")
         Text(text = "Komponen3")

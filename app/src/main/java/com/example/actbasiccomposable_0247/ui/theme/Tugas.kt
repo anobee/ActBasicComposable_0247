@@ -23,9 +23,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.actbasiccomposable_0247.ui.theme.ActBasicComposable_0247Theme
+
 
 @Composable
 fun Tugas(modifier: Modifier = Modifier) {
@@ -55,7 +57,7 @@ fun Tugas(modifier: Modifier = Modifier) {
             Text(
                 text = "Login",
                 fontSize = 28.sp,
-                color = Color.Blue,
+                color = Color.White,
                 fontWeight = FontWeight.Bold
             )
 
@@ -86,7 +88,7 @@ fun Tugas(modifier: Modifier = Modifier) {
             Text(
                 text = "Dicky Dhiva arrayan",
                 fontSize = 16.sp,
-                color = Color.Blue,
+                color = Color.Green,
                 fontWeight = FontWeight.Bold
             )
 
@@ -110,4 +112,11 @@ fun Tugas(modifier: Modifier = Modifier) {
         }
     }
 }
-//komen
+
+@Preview(showBackground = true)
+@Composable
+fun TugasPreview() {
+    ActBasicComposable_0247Theme {
+        Tugas()
+    }
+}
