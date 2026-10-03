@@ -49,7 +49,7 @@ fun Tugas(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(52.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.logo_umy),
+            painter = painterResource(id = R.drawable.image1),
             contentDescription = "Logo universitas",
             modifier = Modifier.size(145.dp),
             contentScale = ContentScale.Fit
@@ -81,8 +81,8 @@ fun Tugas(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(20.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.foto_kabah),
-            contentDescription = "Foto Ka'bah",
+            painter = painterResource(id = R.drawable.image2),
+            contentDescription = "Foto aja",
             modifier = Modifier
                 .size(300.dp)
                 .clip(CircleShape),
