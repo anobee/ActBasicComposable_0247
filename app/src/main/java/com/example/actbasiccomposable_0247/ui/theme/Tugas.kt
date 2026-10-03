@@ -23,82 +23,87 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 
 @Composable
 fun Tugas(modifier: Modifier = Modifier) {
-    Column(
-        modifier = modifier
-            .fillMaxSize()
-            .background(Color.Black)
-            .padding(top = 48.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Top
-    ) {
-        Text(
-            text = "Login",
-            fontSize = 28.sp,
-            color = Color.Blue,
-            fontWeight = FontWeight.Bold
-        )
-
-        Text(
-            text = "Ini adalah halaman login,",
-            fontSize = 14.sp,
-            color = Color.White
-        )
-
-        Spacer(modifier = Modifier.height(52.dp))
+    Box(modifier = modifier.fillMaxSize()) {
 
         Image(
-            painter = painterResource(id = R.drawable.image3),
-            contentDescription = "Logo universitas",
-            modifier = Modifier.size(145.dp),
-            contentScale = ContentScale.Fit
+            painter = painterResource(id = R.drawable.image2),
+            contentDescription = "Background",
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop
         )
-
-        Spacer(modifier = Modifier.height(48.dp))
-
-        Text(
-            text = "Nama",
-            fontSize = 16.sp,
-            color = Color.Red,
-            fontWeight = FontWeight.Bold
-        )
-
-        Text(
-            text = "Dicky Dhiva arrayan",
-            fontSize = 16.sp,
-            color = Color.Blue,
-            fontWeight = FontWeight.Bold
-        )
-
-        Text(
-            text = "20230140247",
-            fontSize = 23.sp,
-            color = Color.Black,
-            fontWeight = FontWeight.Bold
-        )
-
-        Spacer(modifier = Modifier.height(20.dp))
 
         Box(
-            modifier = Modifier.size(300.dp),
-            contentAlignment = Alignment.Center
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.Black.copy(alpha = 0.4f))
+        )
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .padding(top = 48.dp, bottom = 24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Top
         ) {
-            Image(
-                painter = painterResource(id = R.drawable.image2),
-                contentDescription = "Background",
-                modifier = Modifier
-                    .fillMaxSize()
-                    .clip(CircleShape),
-                contentScale = ContentScale.Crop
+            Text(
+                text = "Login",
+                fontSize = 28.sp,
+                color = Color.Blue,
+                fontWeight = FontWeight.Bold
             )
+
+            Text(
+                text = "Ini adalah halaman login.",
+                fontSize = 14.sp,
+                color = Color.White
+            )
+
+            Spacer(modifier = Modifier.height(52.dp))
+
+            Image(
+                painter = painterResource(id = R.drawable.image3),
+                contentDescription = "Logo universitas",
+                modifier = Modifier.size(145.dp),
+                contentScale = ContentScale.Fit
+            )
+
+            Spacer(modifier = Modifier.height(48.dp))
+
+            Text(
+                text = "Nama",
+                fontSize = 16.sp,
+                color = Color.Red,
+                fontWeight = FontWeight.Bold
+            )
+
+            Text(
+                text = "Dicky Dhiva arrayan",
+                fontSize = 16.sp,
+                color = Color.Blue,
+                fontWeight = FontWeight.Bold
+            )
+
+            Text(
+                text = "20230140247",
+                fontSize = 23.sp,
+                color = Color.White,
+                fontWeight = FontWeight.Bold
+            )
+
+            Spacer(modifier = Modifier.height(20.dp))
 
             Image(
                 painter = painterResource(id = R.drawable.image1),
-                contentDescription = "crop foto",
+                contentDescription = "Foto",
                 modifier = Modifier
-                    .size(120.dp)
+                    .size(150.dp)
                     .clip(CircleShape),
                 contentScale = ContentScale.Crop
             )
