@@ -18,7 +18,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(svedInstanceState)
         setContent{
             MyLayoutTheme{
-                Scaffold
+                Scaffold(modifier = modifier.fillMaxSize()){
+                    innerPadding -> TataletakBoxColumnRow(
+                        modifier = modifier.padding(paddingValues = innerPadding)
+                    )
+                }
             }
         }
     }
