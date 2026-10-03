@@ -1,17 +1,27 @@
 package com.example.actbasiccomposable_0247.ui.theme
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.foundation.layout.Row
-import androidx.compose.material3.Text
-import androidx.compose.foundation.layout.Box
-import androidx.compose.material3.Text
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 
 @Composable
@@ -89,59 +99,61 @@ fun TataletakRowColumn(modifier: Modifier){
 }
 
 @Composable
-fun TataletakBoxColumn(modifier:modifier){
-    val gambar = painterresource(id = R.drawable.notasibalok)
-    Column{
-        Box(
-            modifier = modifier
-                .fillMaxWidth
-                .Height(height = 110.dp)
-                .Background(color = color.yellow)
-        ){
-            Column(){
-                Row(
-                    modifier = modifier.fillMaxWidth(),
-                    horizontaArrangement = Arrangement.SpaceEvenly
-                ){
-                    Text(text = "Col1_Row1_Komponen1")
-                    Text(text = "Col1_Row1_Komponen2")
-                    Text(text = "Col1_Row1_Komponen3")
-                }
-                Row(
-                    modifier = modifier.fillMaxWidth()
-                    ,horizontalArrangement = Arrangement.SpaceEvenly
-                ){
-                    Text(text = "Col1_Row1_Komponen1")
-                    Text(text = "Col1_Row1_Komponen2")
-                    Text(text = "Col1_Row1_Komponen3")
-                }
+fun TataletakBoxColumn(modifier: Modifier = Modifier) {
+    val gambar = painterResource(id = R.drawable.notasibalok)
 
+    Column(modifier = modifier) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(110.dp)
+                .background(color = Color.Yellow)
+        ) {
+            Column {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text(text = "Col1_Row1_Komponen1")
+                    Text(text = "Col1_Row1_Komponen2")
+                    Text(text = "Col1_Row1_Komponen3")
+                }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text(text = "Col1_Row2_Komponen1")
+                    Text(text = "Col1_Row2_Komponen2")
+                    Text(text = "Col1_Row2_Komponen3")
+                }
             }
         }
 
-        Spacer(modifier = modifier.height(height = 10.dp))
-        Box(
-            modfier = modifier.fillMaxWidth()
-                .Height(height = 300.dp)
-                .background(color=color.cyan),
-            contentAlingment = Alignment.Center
-        ){
-            Image(Painter = gambar,
-                contentDescription =null,
-                contentscale = ContentScale.fit)
-            Text(text="MyMusic",
-                fontsize = 50.sp,
-                color=color.red,
-                fontWeight = fontWeight.Bold,
-                fontFamily = Font.Family.Cursive,
-                modifier = modifier.align(alignment=Alignment.Center)
-                )
-        }
+        Spacer(modifier = Modifier.height(10.dp))
 
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(300.dp)
+                .background(color = Color.Cyan),
+            contentAlignment = Alignment.Center
+        ) {
+            Image(
+                painter = gambar,
+                contentDescription = null,
+                contentScale = ContentScale.Fit
+            )
+            Text(
+                text = "MyMusic",
+                fontSize = 50.sp,
+                color = Color.Red,
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Cursive,
+                modifier = Modifier.align(Alignment.Center)
+            )
+        }
     }
 }
-
-
 
 
 
