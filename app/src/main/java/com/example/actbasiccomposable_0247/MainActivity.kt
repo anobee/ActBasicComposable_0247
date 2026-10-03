@@ -14,6 +14,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.actbasiccomposable_0247.ui.theme.ActBasicComposable_0247Theme
 
 class MainActivity : ComponentActivity() {
+    Override fun onCreate(savedInstanceState : Bundle?){
+        super.onCreate(svedInstanceState)
+        setContent{
+            MyLayoutTheme{
+                Scaffold
+            }
+        }
+    }
 
 }
 
