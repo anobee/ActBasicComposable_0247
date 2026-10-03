@@ -131,8 +131,13 @@ fun TataletakBoxColumn(modifier:modifier){
             Image(Painter = gambar,
                 contentDescription =null,
                 contentscale = ContentScale.fit)
-            Text
-
+            Text(text="MyMusic",
+                fontsize = 50.sp,
+                color=color.red,
+                fontWeight = fontWeight.Bold,
+                fontFamily = Font.Family.Cursive,
+                modifier = modifier.align(alignment=Alignment.Center)
+                )
         }
 
     }
