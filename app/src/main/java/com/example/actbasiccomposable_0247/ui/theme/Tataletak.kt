@@ -8,6 +8,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.foundation.layout.Row
+import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.Box
+import androidx.compose.material3.Text
 
 
 @Composable
@@ -23,7 +27,7 @@ fun TataletakColumn(modifier: Modifier){
 
 @Composable
 fun TataletakRow(modifier: Modifier) {
-    Row(modfier.fillMaxWidth(),horizontalArrangment = Arrangement.SpaceEvenly){
+    Row(modfier.fillMaxWidth(),horizontalArrangement = Arrangement.SpaceEvenly){
         Text(text = "Komponen1")
         Text(text = "Komponen2")
         Text(text = "Komponen3")
@@ -48,22 +52,18 @@ fun TataletakBox(modifier: Modifier){
 }
 
 @Composable
-fun TataletakColumnRow(modifier: Modifier){
-    ColumnRow(modifier.fillMaxWidth(),
-        horizontalArrangment = Arrangement.SpaceEvenly){
-    }
-}
+fun TataletakColumnRow(modifier: Modifier = Modifier) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
+        Column {
+            Text(text = "Komponen1Kolom1")
+            Text(text = "Komponen2Kolom1")
+            Text(text = "Komponen3Kolom1")
+        }
 
-@Composable
-fun TataletakColumnRow(modifier: Modifier){
-    ColumnRow(modifier = modifier.fillMaxWidth(),
-    horizontalArrangment = Arrangment.SpaceEvently){
-         Column() {
-             Text(text = "Komponen1Kolom1")
-             Text(text = "Komponen2Kolom1")
-             Text(text = "Komponen3Kolom1")
-         }
-        Column() {
+        Column {
             Text(text = "Komponen1Kolom2")
             Text(text = "Komponen2Kolom2")
             Text(text = "Komponen3Kolom2")
@@ -73,15 +73,13 @@ fun TataletakColumnRow(modifier: Modifier){
 
 @Composable
 fun TataletakRowColumn(modifier: Modifier){
-    Row(modifier.fillMaxWidth(), horizontalArrangment = Arrangment.SpaceEvenly)
+    Row(modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly)
     {
-        //koloom1
         Column() {
             Text(text = "Komponen1Kolom1")
             Text(text = "Komponen2Kolom1")
             Text(text = "Komponen3Kolom1")
         }
-        //Kolom2
         Column() {
             Text(text = "Komponen1Kolom1")
             Text(text = "Komponen2Kolom1")
@@ -92,7 +90,7 @@ fun TataletakRowColumn(modifier: Modifier){
 
 @Composable
 fun TataletakBoxColumn(modifier:modifier){
-    val gambar = painterresource(id=R.drawable.notasibalok)
+    val gambar = painterresource(id = R.drawable.notasibalok)
     Column{
         Box(
             modifier = modifier
@@ -103,7 +101,7 @@ fun TataletakBoxColumn(modifier:modifier){
             Column(){
                 Row(
                     modifier = modifier.fillMaxWidth(),
-                    horizontaArrangement = Arrangment.SpaceEvenly
+                    horizontaArrangement = Arrangement.SpaceEvenly
                 ){
                     Text(text = "Col1_Row1_Komponen1")
                     Text(text = "Col1_Row1_Komponen2")
@@ -111,7 +109,7 @@ fun TataletakBoxColumn(modifier:modifier){
                 }
                 Row(
                     modifier = modifier.fillMaxWidth()
-                    ,horizontalArrangment = Arrangment.SpaceEvenly
+                    ,horizontalArrangement = Arrangement.SpaceEvenly
                 ){
                     Text(text = "Col1_Row1_Komponen1")
                     Text(text = "Col1_Row1_Komponen2")
