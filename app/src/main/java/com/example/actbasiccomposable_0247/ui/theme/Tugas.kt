@@ -78,4 +78,15 @@ fun Tugas(modifier: Modifier = Modifier) {
             fontWeight = FontWeight.Bold
         )
 
+        Spacer(modifier = Modifier.height(20.dp))
+
+        Image(
+            painter = painterResource(id = R.drawable.foto_kabah),
+            contentDescription = "Foto Ka'bah",
+            modifier = Modifier
+                .size(300.dp)
+                .clip(CircleShape),
+            contentScale = ContentScale.Crop
+        )
+    }
 }
